@@ -2,18 +2,46 @@ version: "3"
 
 services:
   database:
+    container_name: database
     image: mariadb
     environment:
-      MARIADB_ROOT_PASSWORD: 2710
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: family
+      MYSQL_USER : app
+      MYSQL_PASSWORD: appPassword
     ports:
       - "3306:3306"
+    volumes:
+      - mariadb-data:/var/lib/mysql/data
+    networks:
+      - default
+
   familyApp:
+    container_name: family-app
     build:
       context: familyApp/
       dockerfile: Dockerfile
     image: local/familyapp
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    networks:
+      - default
   familyMemberApp:
+    container_name: family-member-app
     build:
       context: FamilyMemberApp/
       dockerfile: Dockerfile
     image: local/familymemberapp
+    depends_on:
+      - database
+    networks:
+      - default
+
+volumes:
+  mariadb-data:
+
+networks:
+  default:
+    driver: bridge
