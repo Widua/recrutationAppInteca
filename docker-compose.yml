@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  database:
+    image: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: 2710
+    ports:
+      - "3306:3306"
+  familyApp:
+    build:
+      context: familyApp/
+      dockerfile: Dockerfile
+    image: local/familyapp
+  familyMemberApp:
+    build:
+      context: FamilyMemberApp/
+      dockerfile: Dockerfile
+    image: local/familymemberapp

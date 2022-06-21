@@ -1,0 +1,5 @@
+me/widua/familyapp/manager/FamilyManager.class
+me/widua/familyapp/api/FamilyAPI.class
+me/widua/familyapp/model/FamilyModel.class
+me/widua/familyapp/repository/FamilyRepository.class
+me/widua/familyapp/FamilyApp.class
