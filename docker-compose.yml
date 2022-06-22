@@ -18,6 +18,7 @@ services:
 
   familyApp:
     container_name: family-app
+    restart: on-failure
     build:
       context: familyApp/
       dockerfile: Dockerfile
@@ -29,6 +30,7 @@ services:
     networks:
       - default
   familyMemberApp:
+    restart: on-failure
     container_name: family-member-app
     build:
       context: FamilyMemberApp/

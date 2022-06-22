@@ -10,8 +10,10 @@ public class FamilyAPI {
 
     @GetMapping("/")
     public String test(){
-        return "Hello world!" ;
+        return "Hello world!, db work" ;
     }
+
+
 
 
 }
