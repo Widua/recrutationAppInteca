@@ -1,21 +1,22 @@
 package me.widua.familymemberapp.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
+@Table(name = "familyMember")
 public class FamilyMemberModel {
 
     @Id
-    private int id ;
-
-    private int familyId ;
-    private String familyName ;
+    @Column("id")
+    private Integer id ;
+    @Column("familyId")
+    private Integer familyId ;
+    @Column("givenName")
     private String givenName ;
-
+    @Column("age")
+    private Integer age ;
 
 }

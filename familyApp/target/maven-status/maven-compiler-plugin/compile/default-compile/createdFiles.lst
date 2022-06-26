@@ -1,5 +1,10 @@
+me/widua/familyapp/manager/FamilyManager.class
+me/widua/familyapp/model/FamilyMemberModelComplete$FamilyMemberModelCompleteBuilder.class
+me/widua/familyapp/api/FamilyAPI.class
+me/widua/familyapp/model/FamilyModel$FamilyModelBuilder.class
+me/widua/familyapp/model/AddAndGetFamilyModel.class
 me/widua/familyapp/model/FamilyModel.class
 me/widua/familyapp/repository/FamilyRepository.class
-me/widua/familyapp/manager/FamilyManager.class
-me/widua/familyapp/api/FamilyAPI.class
 me/widua/familyapp/FamilyApp.class
+me/widua/familyapp/model/FamilyMemberModelComplete.class
+me/widua/familyapp/model/MemberModel.class

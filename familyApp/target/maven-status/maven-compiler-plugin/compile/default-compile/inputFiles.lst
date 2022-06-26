@@ -1,5 +1,8 @@
+/home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/model/FamilyMemberModelComplete.java
 /home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/FamilyApp.java
 /home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/repository/FamilyRepository.java
 /home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/manager/FamilyManager.java
+/home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/model/AddAndGetFamilyModel.java
 /home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/model/FamilyModel.java
 /home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/api/FamilyAPI.java
+/home/widua/IdeaProjects/recrutationAppInteca/familyApp/src/main/java/me/widua/familyapp/model/MemberModel.java
