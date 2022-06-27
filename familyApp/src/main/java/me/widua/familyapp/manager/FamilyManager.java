@@ -1,9 +1,6 @@
 package me.widua.familyapp.manager;
 
-import me.widua.familyapp.model.AddAndGetFamilyModel;
-import me.widua.familyapp.model.FamilyMemberModelComplete;
-import me.widua.familyapp.model.FamilyModel;
-import me.widua.familyapp.model.MemberModel;
+import me.widua.familyapp.model.*;
 import me.widua.familyapp.repository.FamilyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class FamilyManager {
@@ -49,5 +47,28 @@ public class FamilyManager {
 
 
         return ResponseEntity.ok("This family, will have id: "+familyId);
+    }
+
+    public ResponseEntity<AddAndGetFamilyModel> getFamily(Integer familyId){
+        Optional<FamilyModel> familyOptional = repository.findById(familyId) ;
+        if (familyOptional.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+
+        FamilyModel family = familyOptional.get() ;
+
+        MemberModel[] familyMembers = restTemplate.getForObject(
+                "http://familyMemberApp:8081/api/searchMembers/{familyId}" ,
+                MemberModel[].class ,
+                familyId) ;
+
+        AddAndGetFamilyModel getFamily = AddAndGetFamilyModel.builder()
+                .familyMembers(List.of(familyMembers))
+                .familyName(family.getFamilyName())
+                .nrOfAdults(family.getNrOfAdults())
+                .nrOfChildren(family.getNrOfChildren())
+                .nrOfInfants(family.getNrOfInfants())
+                .build() ;
+        return ResponseEntity.ok(getFamily) ;
     }
 }

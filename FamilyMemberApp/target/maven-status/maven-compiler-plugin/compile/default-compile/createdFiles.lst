@@ -2,4 +2,6 @@ me/widua/familymemberapp/FamilyMemberApp.class
 me/widua/familymemberapp/manager/FamilyMemberManager.class
 me/widua/familymemberapp/repository/FamilyMemberRepository.class
 me/widua/familymemberapp/model/FamilyMemberModel.class
+me/widua/familymemberapp/model/MemberSendModel.class
 me/widua/familymemberapp/api/FamilyMemberAPI.class
+me/widua/familymemberapp/model/MemberSendModel$MemberSendModelBuilder.class

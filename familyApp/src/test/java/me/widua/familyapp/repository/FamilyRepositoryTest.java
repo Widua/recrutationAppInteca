@@ -9,9 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest
-/*
-To run
- */
 @TestPropertySource(properties = "spring.datasource.url=jdbc:mariadb://localhost:3306/families")
 class FamilyRepositoryTest {
 

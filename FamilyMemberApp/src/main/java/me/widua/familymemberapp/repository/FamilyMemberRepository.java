@@ -14,8 +14,8 @@ public interface FamilyMemberRepository extends CrudRepository<FamilyMemberModel
     @Query( "SELECT * FROM families.familyMember WHERE familyId = :familyId" )
     Optional<List<FamilyMemberModel>> findFamilyMemberModelByFamilyId(Integer familyId) ;
 
-    @Query( "SELECT givenName FROM families.familyMember WHERE familyId = :familyId" )
-    Optional<List<String>> findFamilyMembersNeededDataByFamilyId(Integer familyId) ;
+    @Query( "SELECT * FROM families.familyMember WHERE familyId = :familyId" )
+    Optional<List<FamilyMemberModel>> findFamilyMembersNeededDataByFamilyId(Integer familyId) ;
 
 
 }

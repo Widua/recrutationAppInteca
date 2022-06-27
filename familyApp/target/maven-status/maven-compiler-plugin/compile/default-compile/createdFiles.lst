@@ -5,6 +5,7 @@ me/widua/familyapp/model/FamilyModel$FamilyModelBuilder.class
 me/widua/familyapp/model/AddAndGetFamilyModel.class
 me/widua/familyapp/model/FamilyModel.class
 me/widua/familyapp/repository/FamilyRepository.class
+me/widua/familyapp/model/AddAndGetFamilyModel$AddAndGetFamilyModelBuilder.class
 me/widua/familyapp/FamilyApp.class
 me/widua/familyapp/model/FamilyMemberModelComplete.class
 me/widua/familyapp/model/MemberModel.class

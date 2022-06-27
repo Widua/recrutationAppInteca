@@ -17,9 +17,9 @@ public class FamilyAPI {
         this.manager = manager ;
     }
 
-    @GetMapping("/getFamily/{familyNumber}")
-    public ResponseEntity<AddAndGetFamilyModel> getFamily(@PathVariable int familyNumber){
-        return null ;
+    @GetMapping("/getFamily/{familyId}")
+    public ResponseEntity<AddAndGetFamilyModel> getFamily(@PathVariable Integer familyId){
+        return manager.getFamily(familyId) ;
     }
 
     @PostMapping("/addFamily")

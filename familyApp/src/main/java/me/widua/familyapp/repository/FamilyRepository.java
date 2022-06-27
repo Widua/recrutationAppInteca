@@ -13,4 +13,6 @@ public interface FamilyRepository extends CrudRepository<FamilyModel , Integer> 
     @Query("SELECT id FROM families.family WHERE familyName = :familyName;")
     Optional<Integer> getFamilyIdByFamilyName(String familyName) ;
 
+
+
 }
