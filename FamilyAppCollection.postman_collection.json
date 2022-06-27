@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "5edbffe9-1f64-4fec-a11e-dc5c8bf606b8",
+		"name": "FamilyAppCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11813983"
+	},
+	"item": [
+		{
+			"name": "AddFamily",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"familyName\":\"Kowalscy\",\n    \"nrOfAdults\":2,\n    \"nrOfChildren\":0,\n    \"nrOfInfants\":0,\n    \"familyMembers\":[\n        {\n            \"givenName\":\"Jan\",\n            \"age\":60\n        },\n        {\n            \"givenName\":\"Krzysztof\",\n            \"age\":55\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/addFamily",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addFamily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFamily",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getFamily/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getFamily",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

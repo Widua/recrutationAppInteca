@@ -1,0 +1,62 @@
+{
+	"id": "e5286f98-2051-4446-83c9-d7f001e5ca96",
+	"name": "FamilyAppCollection",
+	"timestamp": "2022-06-27T18:50:38.797Z",
+	"collection_id": "11813983-5edbffe9-1f64-4fec-a11e-dc5c8bf606b8",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "522931b5-c5be-4024-b8b9-5e64667582b3",
+			"name": "AddFamily",
+			"url": "http://localhost:8080/addFamily",
+			"time": 540,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				540
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1e185c75-9a67-4f3a-9007-2eb5773b5af9",
+			"name": "GetFamily",
+			"url": "http://localhost:8080/getFamily/1",
+			"time": 75,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				75
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 615,
+	"collection": {
+		"requests": [
+			{
+				"id": "522931b5-c5be-4024-b8b9-5e64667582b3",
+				"method": "POST"
+			},
+			{
+				"id": "1e185c75-9a67-4f3a-9007-2eb5773b5af9",
+				"method": "GET"
+			}
+		]
+	}
+}
